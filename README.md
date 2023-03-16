@@ -1,3 +1,28 @@
+Send the following json towards port 18080 and you will get a response.
+```json
+{
+    "messages": [
+        {
+            "role": "user",
+            "content": "Hello!"
+        },
+        {
+            "role": "ai",
+            "content": " Good to meet you!  I am Bob!  Welcome to my world!"
+        },
+        {
+            "role": "user",
+            "content": "Where is the capital of Japan?"
+        }
+    ]
+}
+```
+
+Also, the startup command is as follows
+```
+./main -m ./models/7B/ggml-model-q4_0.bin -t 24 -n 128 --repeat_penalty 1.0 -i -r "User:"
+```
+
 # llama.cpp
 
 [![Actions Status](https://github.com/ggerganov/llama.cpp/workflows/CI/badge.svg)](https://github.com/ggerganov/llama.cpp/actions)
